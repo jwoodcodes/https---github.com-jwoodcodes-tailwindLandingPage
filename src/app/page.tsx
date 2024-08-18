@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col md:font-nunito bg-zinc-200 min-h-screen">
-      <nav className="flex w-full min-h-24 max-h-24 justify-space-between items-center text-lg tracking-wider bg-zinc-200 text-amber-600">
+      <nav className="flex w-full min-h-20 max-h-20 justify-space-between items-center text-lg tracking-wider bg-zinc-200 text-amber-600 z-10">
         <div className="flex text-6xl pl-6 ml-4  tracking-widest bg-zinc-200 text-amber-600 ">
           <Link href={"/"}>Serene</Link>
         </div>
@@ -42,12 +42,12 @@ export default function Home() {
           width: "100%",
           height: "80%",
           position: "absolute",
-          top: "12%",
+          top: "5dvw",
           // left: "2%",
         }}
         priority
       />
-      <div className="flex justify-end flex-wrap text-align-center text-white text-4xl tracking-wide m-36 mb-12 z-10">
+      <div className="flex justify-end flex-wrap text-align-center text-white text-4xl tracking-wide z-10 m-36 mb-12">
         <h1>
           Vacation shouldn't be stressful. <br /> Leave your worries at home{" "}
           <br /> with <span className="text-amber-600">Serene</span> travel
