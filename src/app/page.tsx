@@ -12,11 +12,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-col md:font-nunito bg-zinc-200 min-h-screen">
-      <nav className="flex w-full min-h-20 max-h-20 justify-space-between items-center text-lg tracking-wider bg-zinc-200 text-amber-600 z-10">
-        <div className="flex text-6xl pl-6 ml-4  tracking-widest bg-zinc-200 text-amber-600 ">
+      <nav className="flex w-full min-h-20 max-h-28 justify-space-between items-center text-lg tracking-wider bg-zinc-200 text-amber-600 z-10">
+        <div className="flex text-xl md:text-4xl lg:text-6xl pl-6 ml-4  tracking-widest bg-zinc-200 text-amber-600 ">
           <Link href={"/"}>Serene</Link>
         </div>
-        <nav className="flex justify-end items-center  text-3xl p-12 w-full mr-6 tracking-wider">
+        <nav className="flex justify-end items-center text-lg md:text-xl lg:text-3xl p-6 md:p-12  w-full md:mr-6  tracking-wider">
           <Link
             href={"/"}
             className="px-4 hover:text-teal-600 hover:-translate-y-2 transition delay-100 active:translate-y-0"
@@ -36,18 +36,18 @@ export default function Home() {
         alt="ocean and beach"
         width={1000}
         height={300}
-        className="border-b-4 border-t-4 border-slate-950"
+        className="border-b-4 border-t-4 border-slate-950 object-cover h-3/4 md:h-5/6 lg:h-8/10"
         style={{
           opacity: 0.95,
           width: "100%",
-          height: "80%",
+          // height: "80%",
           position: "absolute",
           top: "5dvw",
           // left: "2%",
         }}
         priority
       />
-      <div className="flex justify-end flex-wrap text-align-center text-white text-4xl tracking-wide z-10 m-36 mb-12">
+      <div className="flex justify-end flex-wrap text-align-center text-white text-2xl md:text-4xl tracking-wide z-10 m-28 md:m-36 mb-12">
         <h1>
           Vacation shouldn't be stressful. <br /> Leave your worries at home{" "}
           <br /> with <span className="text-amber-600">Serene</span> travel
@@ -55,7 +55,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="flex flex-col justify-center border-2 border-white rounded-lg p-4 ml-auto mr-44 z-10">
+      <div className="flex flex-col justify-center md:border-2 border-white rounded-lg p-4 ml-auto mr-auto md:mr-48 z-10">
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -69,7 +69,7 @@ export default function Home() {
               htmlFor="length-select"
               className="text-white ml-auto mr-auto pb-2 text-lg"
             >
-              Trip Length (days)
+              Trip Length
             </label>
 
             <select
@@ -139,8 +139,8 @@ export default function Home() {
           </div>
         </form>
 
-        <button className=" w-fit bg-amber-800 hover:bg-red-700 p-3 rounded-3xl text-white text-2xl tracking-wide ml-auto mr-auto z-10">
-          Fast, free quote and peace of mind &#8594;
+        <button className=" w-fit bg-amber-800 hover:bg-red-700 p-3 rounded-3xl text-white text-xl md:text-2xl tracking-wide ml-auto mr-auto z-10">
+          Fast quote & peace of mind &#8594;
         </button>
       </div>
     </main>
