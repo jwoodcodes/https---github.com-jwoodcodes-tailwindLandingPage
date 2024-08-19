@@ -49,8 +49,8 @@ export default function Home() {
       />
       <div className="flex justify-end flex-wrap text-align-center text-white text-2xl md:text-4xl tracking-wide z-10 m-28 md:m-36 mb-12">
         <h1>
-          Vacation shouldn't be stressful. <br /> Leave your worries at home{" "}
-          <br /> with <span className="text-amber-600">Serene</span> travel
+          Vacation shouldn`&apos;`t be stressful. <br /> Leave your worries at
+          home <br /> with <span className="text-amber-600">Serene</span> travel
           insurance
         </h1>
       </div>
