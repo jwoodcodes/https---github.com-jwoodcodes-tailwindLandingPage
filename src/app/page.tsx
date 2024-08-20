@@ -47,11 +47,12 @@ export default function Home() {
         }}
         priority
       />
-      <div className="flex justify-end flex-wrap text-align-center text-white text-2xl md:text-4xl tracking-wide z-10 m-28 md:m-36 mb-12">
+      <div className="flex justify-end flex-wrap text-center text-white text-lg md:text-4xl tracking-wide z-10 w-1/2 mt-16 ml-auto mb-12 md:mt-36 md:mb-36 md:mr-12 md:ml-auto lg:mr-36">
         <h1>
-          Vacation shouldn`&apos;`t be stressful. <br /> Leave your worries at
-          home <br /> with <span className="text-amber-600">Serene</span> travel
-          insurance
+          Vacation shouldn&apos;t be stressful. <br /> Leave your worries at
+          home <br /> with{" "}
+          <span className="text-amber-600 text-xl md:text-5xl">Serene</span>{" "}
+          travel insurance
         </h1>
       </div>
 
