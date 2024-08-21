@@ -11,7 +11,7 @@ export default function Home() {
   const [state, setState] = React.useState("");
 
   return (
-    <main className="flex flex-col md:font-nunito bg-zinc-200 min-h-screen">
+    <main className="flex flex-col md:font-nunito bg-zinc-100 min-h-fit-content mb-32 pb-32 lg:mb-52 lg:pb-52">
       <nav className="flex w-full min-h-20 max-h-28 justify-space-between items-center text-lg tracking-wider bg-zinc-200 text-amber-600 z-10">
         <div className="flex text-xl md:text-4xl lg:text-6xl pl-6 ml-4  tracking-widest bg-zinc-200 text-amber-600 ">
           <Link href={"/"}>Serene</Link>
@@ -47,7 +47,7 @@ export default function Home() {
         }}
         priority
       />
-      <div className="flex justify-end flex-wrap text-center text-white text-lg md:text-4xl tracking-wide z-10 w-1/2 mt-16 ml-auto mb-12 md:mt-36 md:mb-36 md:mr-12 md:ml-auto lg:mr-36">
+      <div className="flex justify-end flex-wrap text-center text-white text-lg sm:text-2xl md:text-4xl tracking-wide z-10 w-1/2 mt-16 ml-auto mb-4 mr-2 sm:mr-4 md:mt-14 md:mb-12 md:mr-6 md:ml-auto lg:mr-9 xl:mr-24 lg:mb-8">
         <h1>
           Vacation shouldn&apos;t be stressful. <br /> Leave your worries at
           home <br /> with{" "}
@@ -56,7 +56,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="flex flex-col justify-center md:border-2 border-white rounded-lg p-4 ml-auto mr-auto md:mr-48 z-10">
+      <div className="flex flex-col justify-center md:border-2 border-white rounded-lg p-4 ml-auto mr-auto sm:mr-4 md:mr-8 lg:mr-12 xl:mr-28 z-10 mb-3/4">
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="flex flex-col p-4">
             <label
               htmlFor="length-select"
-              className="text-white ml-auto mr-auto pb-2 text-lg"
+              className="text-white ml-auto mr-auto pb-2 text:base sm:text-lg"
             >
               Trip Length
             </label>
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="flex justify-center flex-col p-4">
             <label
               htmlFor="age-select"
-              className="text-white ml-auto mr-auto pb-2 text-lg"
+              className="text-white ml-auto mr-auto pb-2 text:base sm:text-lg"
             >
               Age
             </label>
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="flex flex-col p-4">
             <label
               htmlFor="state-select"
-              className="text-white ml-auto mr-auto pb-2 text-lg"
+              className="text-white ml-auto mr-auto pb-2 text:base sm:text-lg"
             >
               State
             </label>
@@ -140,9 +140,90 @@ export default function Home() {
           </div>
         </form>
 
-        <button className=" w-fit bg-amber-800 hover:bg-red-700 p-3 rounded-3xl text-white text-xl md:text-2xl tracking-wide ml-auto mr-auto z-10">
+        <button className=" w-fit bg-amber-800 hover:bg-red-700 p-3 rounded-3xl text-white text-xl md:text-2xl lg:text-3xl tracking-wide ml-auto mr-auto z-10">
           Fast quote & peace of mind &#8594;
         </button>
+      </div>
+
+      <div className="w-full text-center text-slate-950 text-5xl relative md:top-28 md:mt-28 lg:top-36 lg:mt-36 xl:top-40 xl:mt-40 2xl:top-48 2xl:mt-48 min-[2000px]:top-72 min-[2000px]:mt-72">
+        Packages
+      </div>
+
+      <div className="flex flex-col flex-wrap sm:flex-row justify-evenly mb-28 mt-96">
+        <div
+          style={{
+            backgroundImage: "url(/colorfulCoastalCity.jpg)",
+            backgroundSize: "cover",
+            height: "50rem",
+          }}
+          className="peer text-white text-xl object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+        >
+          Family
+        </div>
+        <div
+          style={{
+            backgroundImage: "url(/citySquareFromWindow.jpg)",
+            backgroundSize: "cover",
+          }}
+          className="peer text-white text-xl object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+        >
+          Deluxe
+        </div>
+        <div
+          style={{
+            backgroundImage: "url(/hikerOnRockyTerrain.jpg)",
+            backgroundSize: "cover",
+          }}
+          className="peer text-white text-xl object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+        >
+          Jet Setter
+        </div>
+        {/* <Image
+          src="/colorfulCoastalCity.jpg"
+          alt="ocean and beach"
+          width={500}
+          height={200}
+          className="peer object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+          style={{
+            opacity: 0.75,
+            // width: "25%",
+            // height: "10%",
+            // position: "relative",
+            // top: "20dvw",
+          }}
+          priority
+        />
+
+        <Image
+          src="/hikerOnRockyTerrain.jpg"
+          alt="ocean and beach"
+          width={500}
+          height={200}
+          className="peer object-cover h-1/2dvh border-slate-950 border-4 w-1/4  hover:w-2/5 hover:h-[50rem]"
+          style={{
+            opacity: 0.75,
+            // width: "25%",
+            // height: "10%",
+            // position: "relative",
+            // top: "20dvw",
+          }}
+          priority
+        />
+        <Image
+          src="/citySquareFromWindow.jpg"
+          alt="ocean and beach"
+          width={500}
+          height={200}
+          className="peer  object-cover h-1/2dvh border-slate-950 border-4 w-1/4  hover:w-2/5 hover:h-[50rem]"
+          style={{
+            opacity: 0.75,
+            // width: "25%",
+            // height: "10%",
+            // position: "relative",
+            // top: "20dvw",
+          }}
+          priority
+        /> */}
       </div>
     </main>
   );
