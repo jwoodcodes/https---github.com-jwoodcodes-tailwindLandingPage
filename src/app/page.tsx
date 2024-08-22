@@ -47,7 +47,7 @@ export default function Home() {
         }}
         priority
       />
-      <div className="flex justify-end flex-wrap text-center text-white text-lg sm:text-2xl md:text-4xl tracking-wide z-10 w-1/2 mt-16 ml-auto mb-4 mr-2 sm:mr-4 md:mt-14 md:mb-12 md:mr-6 md:ml-auto lg:mr-9 xl:mr-24 lg:mb-8">
+      <div className="flex justify-end flex-wrap text-center text-white text-lg sm:text-2xl xl:text-4xl tracking-wide z-10 w-1/2 mt-16 ml-auto mb-4 mr-[1dvh] sm:mr-4 md:mt-14 md:mb-12 md:mr-6 md:ml-auto lg:mr-9 xl:mr-24 lg:mb-8">
         <h1>
           Vacation shouldn&apos;t be stressful. <br /> Leave your worries at
           home <br /> with{" "}
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="flex flex-col p-4">
             <label
               htmlFor="length-select"
-              className="text-white ml-auto mr-auto pb-2 text:base sm:text-lg"
+              className="text-white ml-auto mr-auto pb-2 max-[400px]:text-sm text:base sm:text-lg"
             >
               Trip Length
             </label>
@@ -90,7 +90,7 @@ export default function Home() {
           <div className="flex justify-center flex-col p-4">
             <label
               htmlFor="age-select"
-              className="text-white ml-auto mr-auto pb-2 text:base sm:text-lg"
+              className="text-white ml-auto mr-auto pb-2 max-[400px]:text-sm text:base sm:text-lg"
             >
               Age
             </label>
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="flex flex-col p-4">
             <label
               htmlFor="state-select"
-              className="text-white ml-auto mr-auto pb-2 text:base sm:text-lg"
+              className="text-white ml-auto mr-auto pb-2 max-[400px]:text-sm text:base sm:text-lg"
             >
               State
             </label>
@@ -140,23 +140,23 @@ export default function Home() {
           </div>
         </form>
 
-        <button className=" w-fit bg-amber-800 hover:bg-red-700 p-3 rounded-3xl text-white text-xl md:text-2xl lg:text-3xl tracking-wide ml-auto mr-auto z-10">
+        <button className=" w-fit bg-amber-800 hover:bg-red-700 p-3 rounded-3xl text-white text-base sm:text-xl md:text-2xl xl:text-3xl tracking-wide ml-auto mr-auto z-10">
           Fast quote & peace of mind &#8594;
         </button>
       </div>
 
-      <div className="w-full text-center text-slate-950 text-5xl relative md:top-28 md:mt-28 lg:top-36 lg:mt-36 xl:top-40 xl:mt-40 2xl:top-48 2xl:mt-48 min-[2000px]:top-72 min-[2000px]:mt-72">
+      <div className="w-full text-center text-slate-950 text-3xl sm:text-5xl relative top-[17dvh] mt-6 min-[400px]:top-28 min-[400px]:mt-28 min-[493px]:top-[25dvw] min-[493px]:mt-[30dvw] md:top-28 md:mt-28 lg:top-36 lg:mt-36 xl:top-40 xl:mt-40 2xl:top-48 2xl:mt-48 min-[2000px]:top-60 min-[2000px]:mt-60 min-[2500px]:top-72 min-[2500px]:mt-72 min-[2750px]:top-80 min-[2750px]:mt-80 min-[3000px]:top-96 min-[3000px]:mt-96">
         Packages
       </div>
 
-      <div className="flex flex-col flex-wrap sm:flex-row justify-evenly mb-28 mt-96">
+      <div className="flex flex-col flex-wrap md:flex-row w-full  md:justify-evenly mb-28 min-[400px]:mb-60 mt-[20dvh] min-[400px]:mt-36 min-[493px]:mt-[35dvw] md:mt-96">
         <div
           style={{
             backgroundImage: "url(/colorfulCoastalCity.jpg)",
             backgroundSize: "cover",
-            height: "50rem",
+            // height: "50rem",
           }}
-          className="peer text-white text-xl object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+          className="peer text-white text-xl object-cover ml-auto mr-auto h-[24rem] sm:h-1/2dvh  border-slate-950 border-4 w-3/4 md:w-1/4 sm:hover:w-2/5 sm:hover:h-[50rem]"
         >
           Family
         </div>
@@ -165,7 +165,7 @@ export default function Home() {
             backgroundImage: "url(/citySquareFromWindow.jpg)",
             backgroundSize: "cover",
           }}
-          className="peer text-white text-xl object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+          className="peer text-white text-xl object-cover ml-auto mr-auto h-[24rem] sm:h-1/2dvh  border-slate-950 border-4 w-3/4 md:w-1/4 sm:hover:w-2/5 sm:hover:h-[50rem] mt-8 md:mt-0"
         >
           Deluxe
         </div>
@@ -174,7 +174,7 @@ export default function Home() {
             backgroundImage: "url(/hikerOnRockyTerrain.jpg)",
             backgroundSize: "cover",
           }}
-          className="peer text-white text-xl object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
+          className="peer text-white text-xl object-cover ml-auto mr-auto h-[24rem] sm:h-1/2dvh  border-slate-950 border-4 w-3/4 md:w-1/4 sm:hover:w-2/5 sm:hover:h-[50rem] mt-8 md:mt-0"
         >
           Jet Setter
         </div>
