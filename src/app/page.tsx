@@ -4,14 +4,20 @@ import Link from "next/link";
 import React from "react";
 import stateAbbrivitaions from "./utils/stateAbbrivitaions";
 import numbersUtil from "./utils/numbersUtil";
+import Services from "./components/Services";
 
 export default function Home() {
   const [length, setLength] = React.useState("");
   const [age, setAge] = React.useState("");
   const [state, setState] = React.useState("");
 
+  const [showStandardServices, setShowStandardServices] = React.useState(false);
+  const [showDeluxeServices, setShowDeluxeServices] = React.useState(false);
+  const [showJetSetterServices, setShowJetSetterServices] =
+    React.useState(false);
+
   return (
-    <main className="flex flex-col md:font-nunito bg-zinc-100 min-h-fit-content mb-32 pb-32 lg:mb-52 lg:pb-52">
+    <main className="flex flex-col md:font-nunito bg-zinc-100 min-h-fit-content ">
       <nav className="flex w-full min-h-20 max-h-28 justify-space-between items-center text-lg tracking-wider bg-zinc-200 text-amber-600 z-10">
         <div className="flex text-xl md:text-4xl lg:text-6xl pl-6 ml-4  tracking-widest bg-zinc-200 text-amber-600 ">
           <Link href={"/"}>Serene</Link>
@@ -145,86 +151,117 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="w-full text-center text-slate-950 text-3xl sm:text-5xl relative top-[17dvh] mt-6 min-[400px]:top-28 min-[400px]:mt-28 min-[493px]:top-[25dvw] min-[493px]:mt-[30dvw] md:top-28 md:mt-28 lg:top-36 lg:mt-36 xl:top-40 xl:mt-40 2xl:top-48 2xl:mt-48 min-[2000px]:top-60 min-[2000px]:mt-60 min-[2500px]:top-72 min-[2500px]:mt-72 min-[2750px]:top-80 min-[2750px]:mt-80 min-[3000px]:top-96 min-[3000px]:mt-96">
+      <div className="w-full text-center text-slate-950 text-3xl sm:text-5xl relative top-[17dvh] mt-12 min-[400px]:top-28 min-[400px]:mt-28 min-[493px]:top-[25dvw] min-[493px]:mt-[30dvw] sm:top-[22dvw] sm:mt-[25dvw] md:top-[20dvw] md:mt-[20dvw] lg:top-[17dvw] lg:mt-[17dvw] xl:top-[14dvw] xl:mt-[14dvw] 2xl:top-52 2xl:mt-52 min-[2000px]:top-72 min-[2000px]:mt-60 min-[2500px]:top-72 min-[2500px]:mt-72 min-[2750px]:top-80 min-[2750px]:mt-80 min-[3000px]:top-96 min-[3000px]:mt-96">
         Packages
       </div>
 
-      <div className="flex flex-col flex-wrap md:flex-row w-full  md:justify-evenly mb-28 min-[400px]:mb-60 mt-[20dvh] min-[400px]:mt-36 min-[493px]:mt-[35dvw] md:mt-96">
+      <div className="flex flex-col flex-wrap md:flex-row w-full  md:justify-evenly mb-28 min-[400px]:mb-60 mt-[20dvh] min-[400px]:mt-36 min-[493px]:mt-[35dvw] md:mt-[30dvw] lg:mt-[25dvw] xl:mt-[22dvw] 2xl:mt-[18dvw]">
         <div
-          style={{
-            backgroundImage: "url(/colorfulCoastalCity.jpg)",
-            backgroundSize: "cover",
-            // height: "50rem",
-          }}
-          className="peer text-white text-xl object-cover ml-auto mr-auto h-[24rem] sm:h-1/2dvh  border-slate-950 border-4 w-3/4 md:w-1/4 sm:hover:w-2/5 sm:hover:h-[50rem]"
+          className="peer text-white text-4xl text-center tracking-wide  p-4 ml-auto mr-auto h-[30rem] min-[400px]:h-[40rem] sm:h-1/2dvh border-slate-950 border-4 w-5/6 md:w-1/4 mt-8 md:mt-0 relative overflow-hidden group"
+          onMouseEnter={() => setShowStandardServices(true)}
+          onMouseLeave={() => setShowStandardServices(false)}
         >
-          Family
+          <Image
+            src="/greekRuins.jpg"
+            alt="Hiker on rocky terrain"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-10"></div>
+          <div className="relative z-20 flex justify-center items-end h-[100%] pb-8">
+            {showStandardServices ? (
+              <Services />
+            ) : (
+              <div className="text-[4rem]">Standard</div>
+            )}
+          </div>
         </div>
         <div
-          style={{
-            backgroundImage: "url(/citySquareFromWindow.jpg)",
-            backgroundSize: "cover",
-          }}
-          className="peer text-white text-xl object-cover ml-auto mr-auto h-[24rem] sm:h-1/2dvh  border-slate-950 border-4 w-3/4 md:w-1/4 sm:hover:w-2/5 sm:hover:h-[50rem] mt-8 md:mt-0"
+          className="peer text-white text-4xl text-center tracking-wide p-4 ml-auto mr-auto h-[30rem] min-[400px]:h-[40rem] sm:h-1/2dvh border-slate-950 border-4 w-5/6 md:w-1/4  mt-8 md:mt-0 relative overflow-hidden group"
+          onMouseEnter={() => setShowDeluxeServices(true)}
+          onMouseLeave={() => setShowDeluxeServices(false)}
         >
-          Deluxe
+          <Image
+            src="/colorfulCoastalCity.jpg"
+            alt="Colorful coastal city"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-10"></div>
+          <div className="relative z-20 flex justify-center items-end h-[100%] pb-8">
+            {showDeluxeServices ? (
+              <Services />
+            ) : (
+              <div className="text-[4rem]">Deluxe</div>
+            )}
+          </div>
         </div>
-        <div
-          style={{
-            backgroundImage: "url(/hikerOnRockyTerrain.jpg)",
-            backgroundSize: "cover",
-          }}
-          className="peer text-white text-xl object-cover ml-auto mr-auto h-[24rem] sm:h-1/2dvh  border-slate-950 border-4 w-3/4 md:w-1/4 sm:hover:w-2/5 sm:hover:h-[50rem] mt-8 md:mt-0"
-        >
-          Jet Setter
-        </div>
-        {/* <Image
-          src="/colorfulCoastalCity.jpg"
-          alt="ocean and beach"
-          width={500}
-          height={200}
-          className="peer object-cover h-1/2dvh  border-slate-950 border-4 w-1/4 hover:w-2/5 hover:h-[50rem]"
-          style={{
-            opacity: 0.75,
-            // width: "25%",
-            // height: "10%",
-            // position: "relative",
-            // top: "20dvw",
-          }}
-          priority
-        />
 
-        <Image
-          src="/hikerOnRockyTerrain.jpg"
-          alt="ocean and beach"
-          width={500}
-          height={200}
-          className="peer object-cover h-1/2dvh border-slate-950 border-4 w-1/4  hover:w-2/5 hover:h-[50rem]"
-          style={{
-            opacity: 0.75,
-            // width: "25%",
-            // height: "10%",
-            // position: "relative",
-            // top: "20dvw",
-          }}
-          priority
-        />
-        <Image
-          src="/citySquareFromWindow.jpg"
-          alt="ocean and beach"
-          width={500}
-          height={200}
-          className="peer  object-cover h-1/2dvh border-slate-950 border-4 w-1/4  hover:w-2/5 hover:h-[50rem]"
-          style={{
-            opacity: 0.75,
-            // width: "25%",
-            // height: "10%",
-            // position: "relative",
-            // top: "20dvw",
-          }}
-          priority
-        /> */}
+        <div
+          className="peer text-white text-4xl text-center tracking-wide p-4 ml-auto mr-auto h-[30rem] min-[400px]:h-[40rem] sm:h-1/2dvh border-slate-950 border-4 w-5/6 md:w-1/4  mt-8 md:mt-0 relative overflow-hidden group"
+          onMouseEnter={() => setShowJetSetterServices(true)}
+          onMouseLeave={() => setShowJetSetterServices(false)}
+        >
+          <Image
+            src="/citySquareFromWindow.jpg"
+            alt="City Square from Window"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-10"></div>
+          <div className="relative z-20 flex justify-center items-end h-[100%] pb-8">
+            {showJetSetterServices ? (
+              <Services />
+            ) : (
+              <div className="text-[4rem]">Jet Setter</div>
+            )}
+          </div>
+        </div>
       </div>
+      <footer className="bg-zinc-200 text-amber-600 py-8 mt-auto">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-between items-center">
+            <div className="w-full md:w-1/3 mb-6 md:mb-0">
+              <h3 className="text-2xl font-bold mb-2">Serene</h3>
+              <p className="text-sm">Travel insurance for peace of mind</p>
+            </div>
+            <div className="w-full md:w-1/3 mb-6 md:mb-0">
+              <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
+              <ul className="text-sm">
+                <li>
+                  <Link href="/" className="hover:text-teal-600">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-teal-600">
+                    View Packages
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="hover:text-teal-600">
+                    Get a Quote
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="w-full md:w-1/3">
+              <h4 className="text-lg font-semibold mb-2">Contact Us</h4>
+              <p className="text-sm">
+                1234 Travel Lane, Adventure City, AC 56789
+              </p>
+              <p className="text-sm">Phone: (555) 123-4567</p>
+              <p className="text-sm">Email: info@serene-insurance.com</p>
+            </div>
+          </div>
+          <div className="mt-8 text-center text-sm">
+            <p>&copy; 2024 Serene Travel Insurance. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
