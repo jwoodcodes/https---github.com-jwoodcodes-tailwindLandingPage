@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Services() {
-  const [hoveredService, setHoveredService] = useState(null);
+  const [hoveredService, setHoveredService] = useState("");
 
   const insuranceServices = [
     {
@@ -63,7 +63,7 @@ export default function Services() {
             key={service.name}
             className="relative"
             onMouseEnter={() => setHoveredService(service.name)}
-            onMouseLeave={() => setHoveredService(null)}
+            onMouseLeave={() => setHoveredService("")}
           >
             <p className=" text-white px-4 py-2 rounded cursor-pointer">
               {service.name}
